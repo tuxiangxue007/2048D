@@ -49,7 +49,13 @@
 }
 - (void)generateDigital:(int)num{
     self.integralLab.text = [NSString stringWithFormat:@"积分：%d",self.intergral += num];
+}
+- (void)gameOver{
+    self.unitActions = 0;
+    self.intergral = 0;
     
+    self.unitActionsLab.text = [NSString stringWithFormat:@"行动次数：%d", ++self.unitActions];
+    self.integralLab.text = [NSString stringWithFormat:@"积分：%d",self.intergral];
 }
 
 - (void)didReceiveMemoryWarning {

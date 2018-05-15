@@ -186,6 +186,7 @@
             lab.text = @"";
         }
         [self startGame];
+        [self.delegate gameOver];
     }];//https在iTunes中找，这里的事件是前往手机端App store下载微信
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];

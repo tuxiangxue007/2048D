@@ -16,6 +16,7 @@
 @class TDDCanvasView;
 @protocol TDDCanvasViewDelegate <NSObject>
 - (void)actionComplete;
+- (void)gameOver;
 - (void)generateDigital:(int)num;
 @end
 
