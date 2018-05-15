@@ -29,9 +29,9 @@
         self.mDataArr = [NSMutableArray array];
         
         self.backgroundColor = [self colorWithHexString:@"b1b2a1"];
-        for (int i = 1; i <= TDD_MaxLineNum; i ++) {
-            for (int j = 1; j <= TDD_MaxLineNum; j ++) {
-                UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(TDD_BLOCK_Interval + (TDD_BLOCK_Interval + TDD_BLOCK_WITH) * (j - 1), TDD_BLOCK_Interval + (TDD_BLOCK_Interval + TDD_BLOCK_WITH) * (i - 1), TDD_BLOCK_WITH, TDD_BLOCK_WITH)];
+        for (int i = 1; i <= TD_MaxLineNum; i ++) {
+            for (int j = 1; j <= TD_MaxLineNum; j ++) {
+                UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(TD_BLOCK_Interval + (TD_BLOCK_Interval + TD_BLOCK_WITH) * (j - 1), TD_BLOCK_Interval + (TD_BLOCK_Interval + TD_BLOCK_WITH) * (i - 1), TD_BLOCK_WITH, TD_BLOCK_WITH)];
                 lab.backgroundColor = [UIColor whiteColor];
                 lab.textAlignment = NSTextAlignmentCenter;
                 lab.tag = i * 100 + j;
@@ -107,7 +107,7 @@
         j = 1;
         z = i;
     }else if (direction == UISwipeGestureRecognizerDirectionDown) {
-        i = TDD_MaxLineNum - 1;
+        i = TD_MaxLineNum - 1;
         j = 1;
         z = i;
     }else if (direction == UISwipeGestureRecognizerDirectionLeft) {
@@ -116,16 +116,16 @@
         z = j;
     }else if (direction == UISwipeGestureRecognizerDirectionRight) {
         i = 1;
-        j = TDD_MaxLineNum - 1;
+        j = TD_MaxLineNum - 1;
         z = j;
     }
     
-    for (int num_i = i; i == TDD_MaxLineNum - 1? num_i > 0 : num_i <= TDD_MaxLineNum; i == TDD_MaxLineNum - 1?num_i --:num_i ++) {
-        for (int num_j = j; j == TDD_MaxLineNum - 1? num_j > 0 : num_j <= TDD_MaxLineNum; j == TDD_MaxLineNum - 1?num_j --:num_j ++) {
+    for (int num_i = i; i == TD_MaxLineNum - 1? num_i > 0 : num_i <= TD_MaxLineNum; i == TD_MaxLineNum - 1?num_i --:num_i ++) {
+        for (int num_j = j; j == TD_MaxLineNum - 1? num_j > 0 : num_j <= TD_MaxLineNum; j == TD_MaxLineNum - 1?num_j --:num_j ++) {
             int key = i == 1?(j==2?num_i * 100 + num_j - 1:num_i * 100 + num_j + 1):(i==2?(num_i - 1) * 100 + num_j:(num_i + 1) * 100 + num_j);
             UILabel *lab = [self viewWithTag:key];
             
-            for (int num_z = (i == 1?num_j:num_i) ; z == TDD_MaxLineNum - 1? num_z > 0 : num_z <= TDD_MaxLineNum; z == TDD_MaxLineNum - 1?num_z --:num_z ++) {
+            for (int num_z = (i == 1?num_j:num_i) ; z == TD_MaxLineNum - 1? num_z > 0 : num_z <= TD_MaxLineNum; z == TD_MaxLineNum - 1?num_z --:num_z ++) {
                 
                 int dicKey = z==i?num_z * 100 + num_j:num_i * 100 + num_z;
                 NSString *dicKeyStr = [NSString stringWithFormat:@"%d",dicKey];

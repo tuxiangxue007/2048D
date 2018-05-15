@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define TDD_MaxLineNum 4
-#define TDD_BLOCK_Interval  5.0
-#define TDD_ScreenWidth     [UIScreen mainScreen].bounds.size.width
-#define TDD_BLOCK_WITH      (TDD_ScreenWidth - 5.0 * (TDD_MaxLineNum + 1))/TDD_MaxLineNum
+#define TD_MaxLineNum 4
+#define TD_BLOCK_Interval  5.0
+#define TD_ScreenWidth     [UIScreen mainScreen].bounds.size.width
+#define TD_BLOCK_WITH      (TD_ScreenWidth - 5.0 * (TD_MaxLineNum + 1))/TD_MaxLineNum
 
 @class TDDCanvasView;
 @protocol TDDCanvasViewDelegate <NSObject>

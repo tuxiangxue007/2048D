@@ -37,7 +37,7 @@
     [self.view addSubview:self.integralLab];
     
     TDDCanvasView *canvasView = [[TDDCanvasView alloc]init];
-    canvasView.frame = CGRectMake(0, 150, TDD_ScreenWidth, TDD_ScreenWidth);
+    canvasView.frame = CGRectMake(0, 150, TD_ScreenWidth, TD_ScreenWidth);
     [canvasView startLayout];
     canvasView.delegate = self;
     [self.view addSubview:canvasView];
